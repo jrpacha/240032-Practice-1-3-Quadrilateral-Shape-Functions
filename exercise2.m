@@ -3,7 +3,7 @@
 %Files required:
 
 % meshTwoHolesQuad.m:    uncompress this file from meshFilesAll.rar
-% plotQuadMesh.m:        uncompress this file from additionalFiles.zip 
+% plotElements.m:        uncompress this file from additionalFiles.zip 
 % plotContourSolution.m: uncompress this file from additionalFiles.zip
 % baryCoordQuad.m
 
@@ -51,7 +51,7 @@ end
 
 %Draw the mesh, and mark the point p and its element's nodes
 figure()
-plotQuadMesh(nodes, elem);
+plotElements(nodes, elem,0);
 hold on
 plot(p(1,1),p(1,2),'or','Marker','o','MarkerFaceColor','red',...
     'MarkerSize',5)
