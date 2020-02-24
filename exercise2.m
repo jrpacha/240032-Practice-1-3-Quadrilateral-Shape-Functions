@@ -41,6 +41,7 @@ for e=1:numElem
         numElemP = e;
         numNodesP = [n1,n2,n3,n4];
         nodesP = vertexs;
+        %interpTemp = alphas*temp(numNodesP);
         interpTemp=temp(n1)*alphas(1)+... %Interpolates temp. at point p
             temp(n2)*alphas(2)+...
             temp(n3)*alphas(3)+...
@@ -70,14 +71,9 @@ plot(vertexs(:,1),vertexs(:,2),'ok','Marker','o','MarkerFaceColor',...
     'black','MarkerSize',4)
 hold off
                      
-format short e
-numElemP
-numNodesP
-nodesP
-p
-interpTemp
-
-% Fancy output with fprintf: don't try this at exams!
+%Fancy output with fprintf: don't try this at exams!
+fprintf('--------------------------------------------------\n')
+fprintf('Fancy output: don''t try this at the exams!\n')
 fprintf('Elem.: %d\n',numElemP)
 fprintf('Nodes: %d,%d,%d,%d\n',numNodesP)
 fprintf('%20s\n','Vertexs Coords.')
@@ -85,3 +81,13 @@ fprintf('%7s%11s\n','X','Y')
 fprintf('%12.5e%12.5e\n',nodesP')
 fprintf('\nInterpolated Temp.at point p=(%f,%f):\nT=%12.5e\n',...
     p,interpTemp);
+fprintf('--------------------------------------------------\n')
+
+%An straightforward way to print the results:
+fprintf('\nAn straightforward way to get the results...\n')
+format short e
+numElemP
+numNodesP
+nodesP
+p
+interpTemp
