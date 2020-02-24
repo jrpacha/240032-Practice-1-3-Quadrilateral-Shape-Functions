@@ -38,6 +38,13 @@ for e=1:numElem
     vertexs=[v1;v2;v3;v4];
     [alphas,isInside]=baryCoordQuad(vertexs,p);
     if isInside >=1
+        numElemP = e;
+        numNodesP = [n1,n2,n3,n4];
+        nodesP = vertexs;
+        interpTemp=temp(n1)*alphas(1)+... %Interpolates temp. at point p
+            temp(n2)*alphas(2)+...
+            temp(n3)*alphas(3)+...
+            temp(n4)*alphas(4);
         break;
     end
 end
@@ -62,25 +69,19 @@ plot(p(1,1),p(1,2),'ok','Marker','o','MarkerFaceColor','black',...
 plot(vertexs(:,1),vertexs(:,2),'ok','Marker','o','MarkerFaceColor',...
     'black','MarkerSize',4)
 hold off
-                      
-%Interpolate temperature at point p                      
-interpTemp=temp(n1)*alphas(1)+...
-    temp(n2)*alphas(2)+...
-    temp(n3)*alphas(3)+...
-    temp(n4)*alphas(4);
-
+                     
 format short e
-e
-nods=[n1,n2,n3,n4]
-vertexs
+numElemP
+numNodesP
+nodesP
 p
 interpTemp
 
 % Fancy output with fprintf: don't try this at exams!
-fprintf('Elem.: %d\n',e)
-fprintf('Nodes: %d,%d,%d,%d\n',n1,n2,n3,n4)
+fprintf('Elem.: %d\n',numElemP)
+fprintf('Nodes: %d,%d,%d,%d\n',numNodesP)
 fprintf('%20s\n','Vertexs Coords.')
 fprintf('%7s%11s\n','X','Y')      
-fprintf('%12.5e%12.5e\n',vertexs')
+fprintf('%12.5e%12.5e\n',nodesP')
 fprintf('\nInterpolated Temp.at point p=(%f,%f):\nT=%12.5e\n',...
     p,interpTemp);
