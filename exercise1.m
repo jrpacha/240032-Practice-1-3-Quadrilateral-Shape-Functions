@@ -1,15 +1,15 @@
-%exercise1.m: computation of the barycentric coordinates of a point w.r.t.
-%a given quadrilateral
+%Exercise1.m: computation of the barycentric coordinates of the point 
+%point p = [3,2] w.r.t. the quadrilateral defined by the vertexs,
+%v1 = [0,0], v2 = [5,-1], v3 = [4,5], v4 = [1,4];
 
 %Files required:
 % plotRectangle.m: uncompress this file from additionalFiles.zip 
 % baryCoordQuad.m
 
-%Be sure it is placed in the current folder!
+%Be sure they're placed in the current folder!
 
 %You can download meshFilesAll.rar and additionalFiles.zip from 
 %Toni Susin's Numerical Factory.
-
 
 clearvars
 close all
