@@ -10,7 +10,7 @@ https://numfactory.upc.edu/blog/2018/09/03/finite-element-introduction-course/
 Prof. Rafael Ramírez found out a way for tracking the mouse. These methods are used
 here in function **qR2qK** (in <tt>qR2qK.m</tt>), so he deserves the merit.
 
-Disclaimer: this stuff is provided 'as is'. Please, chek it (just in case
+Disclaimer: this stuff is provided 'as is'. Please, check it (just in case
 you find it useful), but **it's worth you try to write all the programs 
 on your own**.
 
