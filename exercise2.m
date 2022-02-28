@@ -2,8 +2,9 @@
 
 %Files required:
 
-% meshTwoHolesQuad.m:    uncompress this file from meshFilesAll.rar
+% meshTwoHolesQuad.m:    uncompress this file from meshFilesAll.zip
 % plotElements.m:        uncompress this file from additionalFiles.zip 
+% plotElements.old:      uncompress thi  file from additionalFiles.zip
 % plotContourSolution.m: uncompress this file from additionalFiles.zip
 % baryCoordQuad.m
 
@@ -51,8 +52,8 @@ for e=1:numElem
 end
 
 %Draw the mesh, and mark the point p and its element's nodes
-figure()
-plotElements(nodes, elem,0);
+%figure()
+plotElementsOld(nodes, elem,0);
 hold on
 plot(p(1,1),p(1,2),'or','Marker','o','MarkerFaceColor','red',...
     'MarkerSize',5)
