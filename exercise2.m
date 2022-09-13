@@ -27,6 +27,10 @@ numElem=size(elem,1);   %number of elements
 temp=1:numNodes; %temperatures at the nodes. Just an example!
 temp=temp(:);
 
+%g = @(x,y) 20 + (x-80).^2 + y.^2;
+%x=nodes(:,1), y=nodes(:,2);
+%temp = g(x,y);
+
 for e=1:numElem
     n1=elem(e,1);
     n2=elem(e,2);
