@@ -65,11 +65,11 @@ end
 
 areaMax = max(areaElem);
 tempMax = max(tempElem);
-averagedTemp = sum(areaElem'*tempElem)/sum(areaElem);
+averagedTemp = areaElem'*tempElem/sum(areaElem);
 areaElemHintB = areaElem(numElemHintB);
 tempElemHintB = tempElem(numElemHintB);
 
-fprintf('\n\t\tPart(b)\n\n')
+fprintf('\n\t\tPart (b)\n\n')
 fprintf('%-9s%14.5e\n%9s%14.5e%sC\n%9s%14.5e%sC\n',...
     'max.area',areaMax,...
     'max.temp.',tempMax,celsiusDeg,...
