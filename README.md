@@ -2,7 +2,7 @@
 ## P1.3-Quadrilateral Shape Functions. Session's source code. 
 
 You can find the session's guide ---together with other extra material
-files---at Toni Susin's 'Numerical Factory', 
+files---at professor Toni Susin's 'Numerical Factory', 
 
 https://numfactory.upc.edu/blog/2018/09/03/finite-element-introduction-course/
 
