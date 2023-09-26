@@ -1,20 +1,28 @@
 clearvars
 close all
 
-vertexs = [0, 0; 
+vertexs = [
+    0, 0; 
     5,-1; 
     4, 5; 
-    1, 4];
+    1, 4
+    ];
+
+vertexsPlot = [vertexs; vertexs(1,:)];
 
 elem = [1,2,3,4];
 
-p = [3, 2];
+vertexsR = [
+    0, 0;
+    1, 0;
+    1, 1;
+    0, 1;
+    ]
 
-plotElementsOld(vertexs, elem, 1)
-hold on
-plot(p(:,1),p(:,2),'o','MarkerFaceColor','red',...
-    'MarkerSize',6)
-hold off
+vertexsRPlot = [vertexsR; vertexsR(1,:)];
+
+p = [3, 4];
+%p = [6,2];
 
 a = vertexs(1,:)-p;
 b = vertexs(2,:)-vertexs(1,:);
@@ -72,5 +80,36 @@ fprintf("Iterat-5: ")
 %% Barycententric coords
 x = z(1); y=z(2);
 alphas = [(1-x)*(1-y), x*(1-y), x*y, y*(1-x)]
+
+% Plots
+subplot(1,2,1)
+%plotElementsOld(vertexsR, elem, 1)
+plot(vertexsR(:,1), vertexsR(:,2),'o',...
+    'MarkerFaceColor','blue',...
+    'MarkerSize', 5)
+axis('equal')
+hold on
+plot(vertexsRPlot(:,1), vertexsRPlot(:,2), '-',...
+    'Color', 'blue')
+plot(z(1,:),z(2,:),'o',...
+    'MarkerFaceColor','blue',...
+    'MarkerSize',6)
+xlabel('$\lambda$','Interpreter','latex')
+ylabel('$\mu$','Interpreter','latex')
+hold off
+subplot(1,2,2)
+%plotElementsOld(vertexs, elem, 1)
+plot(vertexs(:,1), vertexs(:,2),'o',...
+    'MarkerFaceColor','red',...
+    'MarkerSize', 5)
+axis('equal')
+hold on
+plot(vertexsPlot(:,1), vertexsPlot(:,2), '-',...
+    'Color','red')
+plot(p(:,1),p(:,2),'o','MarkerFaceColor','red',...
+    'MarkerSize',6)
+xlabel('$x$','Interpreter','latex')
+ylabel('$y$','Interpreter','latex')
+hold off
 
 
